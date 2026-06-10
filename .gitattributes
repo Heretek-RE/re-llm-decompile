@@ -1,0 +1,39 @@
+# Text files — normalize line endings
+* text=auto
+
+# Markdown
+*.md text diff=markdown eol=lf
+
+# Python
+*.py text diff=python
+*.pyi text
+
+# Config / data
+*.yml text
+*.yaml text
+*.json text
+*.toml text
+*.cfg text
+*.ini text
+
+# Shell scripts — LF only
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Web
+*.html text
+*.css text
+*.js text
+*.ts text
+
+# Binary — do not touch
+*.dll binary
+*.exe binary
+*.so binary
+*.dylib binary
+*.apk binary
+*.aab binary
+*.jar binary
+*.dex binary
+*.bin binary
+*.dat binary
