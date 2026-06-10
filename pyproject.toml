@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "re-llm-decompile"
+version = "0.1.0"
+description = "MCP server exposing LLM4Decompile / vLLM / Ollama OpenAI-compatible endpoints for AI decompilation."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+keywords = ["mcp", "llm4decompile", "decompilation", "vllm", "ollama", "ai", "reverse-engineering"]
+authors = [{name = "John"}]
+dependencies = [
+    "mcp[cli]>=1.2",
+    "httpx>=0.28",
+    "tenacity>=9.0",
+    "pydantic>=2.6",
+]
+
+[project.scripts]
+re-llm-decompile = "re_llm_decompile.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
